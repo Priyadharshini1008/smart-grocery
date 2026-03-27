@@ -1,0 +1,48 @@
+.orders-page { min-height: 100vh; background: var(--gray-50); }
+.orders-header { margin-bottom: 28px; }
+.orders-header h1 { font-size: 1.8rem; font-weight: 900; margin-bottom: 4px; }
+.orders-header p { color: var(--gray-500); font-weight: 600; }
+
+.orders-list { display: flex; flex-direction: column; gap: 14px; }
+
+.order-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); }
+
+.order-card-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; cursor: pointer; transition: background 0.2s; gap: 12px; flex-wrap: wrap; }
+.order-card-header:hover { background: var(--gray-50); }
+
+.order-meta { display: flex; flex-direction: column; gap: 4px; }
+.order-id { font-weight: 900; font-size: 0.95rem; color: var(--gray-900); }
+.order-date { font-size: 0.8rem; color: var(--gray-500); font-weight: 600; }
+
+.order-status-price { display: flex; align-items: center; gap: 14px; }
+.order-amount { font-size: 1.1rem; font-weight: 900; color: var(--green-dark); }
+.expand-icon { color: var(--gray-400); font-size: 0.8rem; }
+
+.order-details { padding: 0 20px 20px; border-top: 2px dashed var(--gray-200); }
+
+.order-track { display: flex; gap: 0; margin: 20px 0; overflow-x: auto; }
+.track-step { display: flex; align-items: center; gap: 6px; padding: 6px 14px; position: relative; color: var(--gray-400); font-size: 0.78rem; font-weight: 700; }
+.track-step:not(:last-child)::after { content: '→'; margin-left: 6px; }
+.track-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gray-300); flex-shrink: 0; }
+.track-step.done { color: var(--green); }
+.track-step.done .track-dot { background: var(--green); }
+
+.order-items-grid { background: var(--gray-50); border-radius: 12px; padding: 14px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px; }
+.order-detail-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; }
+.odi-name { flex: 1; font-weight: 700; color: var(--gray-900); }
+.odi-qty { color: var(--gray-500); }
+.odi-price { font-weight: 800; color: var(--green-dark); }
+
+.order-summary-mini { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.osm-row { font-size: 0.82rem; color: var(--gray-600); font-weight: 600; }
+.osm-row.green { color: var(--green); }
+.osm-row.total { font-size: 0.95rem; font-weight: 900; color: var(--gray-900); }
+
+.delivered-banner { background: #dcfce7; color: #166534; border-radius: 12px; padding: 12px 16px; font-size: 0.88rem; font-weight: 700; text-align: center; }
+.delivery-eta-banner { background: #fffbeb; color: #92400e; border-radius: 12px; padding: 12px 16px; font-size: 0.85rem; font-weight: 600; text-align: center; }
+.delivery-eta-banner strong { color: #78350f; }
+
+.empty-orders { text-align: center; padding: 80px 20px; }
+.empty-icon { font-size: 4rem; margin-bottom: 16px; }
+.empty-orders h3 { font-size: 1.3rem; font-weight: 800; color: var(--gray-700); margin-bottom: 8px; }
+.empty-orders p { color: var(--gray-500); }

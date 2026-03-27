@@ -1,0 +1,62 @@
+.admin-page { min-height: 100vh; background: var(--gray-50); }
+.admin-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; flex-wrap: wrap; gap: 14px; }
+.admin-header h1 { font-size: 1.8rem; font-weight: 900; margin-bottom: 4px; }
+.admin-header p { color: var(--gray-500); font-size: 0.9rem; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+
+.stat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+}
+.stat-card.green::before { background: var(--green); }
+.stat-card.orange::before { background: var(--orange); }
+.stat-card.purple::before { background: var(--purple); }
+.stat-card.blue::before { background: var(--blue); }
+
+.stat-icon { font-size: 2rem; background: var(--gray-100); width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.stat-value { font-size: 1.6rem; font-weight: 900; color: var(--gray-900); line-height: 1; }
+.stat-label { font-size: 0.82rem; color: var(--gray-500); font-weight: 600; margin-top: 4px; }
+
+.today-orders-section h2 { font-size: 1.2rem; font-weight: 800; margin-bottom: 16px; color: var(--gray-900); }
+
+.admin-table-wrap { background: white; border-radius: 16px; box-shadow: var(--shadow); overflow-x: auto; }
+.admin-table { width: 100%; border-collapse: collapse; }
+.admin-table thead th { padding: 14px 16px; background: var(--gray-50); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-500); text-align: left; border-bottom: 2px solid var(--gray-200); white-space: nowrap; }
+.admin-table tbody td { padding: 14px 16px; border-bottom: 1px solid var(--gray-100); font-size: 0.88rem; color: var(--gray-700); vertical-align: middle; }
+.admin-table tbody tr:last-child td { border-bottom: none; }
+.admin-table tbody tr:hover td { background: var(--gray-50); }
+
+.order-id-cell { font-weight: 800; color: var(--gray-900); font-family: monospace; }
+.customer-cell { display: flex; align-items: center; gap: 10px; }
+.cust-avatar { width: 32px; height: 32px; background: linear-gradient(135deg, var(--green), var(--green-light)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; }
+.cust-name { font-weight: 700; color: var(--gray-900); font-size: 0.88rem; }
+.cust-addr { font-size: 0.75rem; color: var(--gray-400); }
+.items-count { background: var(--gray-100); padding: 3px 10px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; }
+.amount-cell { font-weight: 900; color: var(--green-dark); }
+
+.status-select { border: 2px solid var(--gray-200); border-radius: 8px; padding: 6px 10px; font-family: 'Nunito', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--gray-700); cursor: pointer; outline: none; }
+.status-select:focus { border-color: var(--green); }
+
+.no-orders { text-align: center; background: white; border-radius: 16px; padding: 40px; color: var(--gray-400); font-weight: 600; }
+
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}

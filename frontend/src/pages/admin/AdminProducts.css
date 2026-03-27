@@ -1,0 +1,47 @@
+.products-filters { display: flex; gap: 16px; margin-bottom: 24px; flex-direction: column; }
+.filter-search { width: 100%; max-width: 400px; padding: 10px 16px; border: 2px solid var(--gray-200); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 0.9rem; outline: none; }
+.filter-search:focus { border-color: var(--green); }
+.filter-cats { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+
+.admin-products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+
+.admin-prod-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow 0.2s; }
+.admin-prod-card:hover { box-shadow: var(--shadow-lg); }
+.admin-prod-card.oos { opacity: 0.75; }
+
+.apcard-img { height: 150px; background: linear-gradient(135deg, #f0fdf4, #dcfce7); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.apcard-img img { width: 100%; height: 100%; object-fit: cover; }
+.apcard-placeholder { font-size: 3.5rem; }
+.featured-tag { position: absolute; top: 8px; left: 8px; background: var(--yellow); color: #78350f; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem; font-weight: 800; }
+.status-dot { position: absolute; top: 8px; right: 8px; width: 10px; height: 10px; border-radius: 50%; }
+.status-dot.available { background: var(--green-light); box-shadow: 0 0 0 3px rgba(34,197,94,0.3); }
+.status-dot.oos { background: var(--red); box-shadow: 0 0 0 3px rgba(239,68,68,0.3); }
+
+.apcard-info { padding: 14px; }
+.apcard-cat { font-size: 0.72rem; font-weight: 700; color: var(--green); margin-bottom: 5px; }
+.apcard-info h3 { font-size: 0.92rem; font-weight: 800; color: var(--gray-900); margin-bottom: 10px; }
+.apcard-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.apcard-price { font-size: 1rem; font-weight: 900; color: var(--green-dark); }
+.apcard-unit { background: var(--gray-100); padding: 2px 7px; border-radius: 6px; font-size: 0.72rem; font-weight: 600; color: var(--gray-500); }
+.apcard-stock { font-size: 0.78rem; font-weight: 700; color: var(--gray-600); }
+.apcard-stock.zero { color: var(--red); }
+.apcard-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.apcard-actions .btn { font-size: 0.75rem; padding: 5px 10px; }
+
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 2000; padding: 20px; backdrop-filter: blur(4px); }
+.modal-box { background: white; border-radius: 24px; width: 100%; max-width: 560px; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 25px 60px rgba(0,0,0,0.25); }
+.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 2px solid var(--gray-100); }
+.modal-header h2 { font-size: 1.1rem; font-weight: 900; }
+.modal-close { background: var(--gray-100); border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 0.85rem; font-weight: 700; }
+.modal-body { padding: 20px 24px; overflow-y: auto; flex: 1; }
+.modal-footer { padding: 16px 24px; border-top: 2px solid var(--gray-100); display: flex; gap: 12px; justify-content: flex-end; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { margin-bottom: 16px; }
+.form-label { display: block; font-weight: 700; font-size: 0.84rem; color: var(--gray-700); margin-bottom: 6px; }
+.form-input { width: 100%; padding: 10px 13px; border: 2px solid var(--gray-200); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 0.9rem; color: var(--gray-900); outline: none; transition: border-color 0.2s; }
+.form-input:focus { border-color: var(--green); }
+
+.form-check { display: flex; align-items: center; gap: 10px; }
+.form-check input { width: 16px; height: 16px; cursor: pointer; }
+.form-check label { font-size: 0.88rem; font-weight: 600; color: var(--gray-700); cursor: pointer; }

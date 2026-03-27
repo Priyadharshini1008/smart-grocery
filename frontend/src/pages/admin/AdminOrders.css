@@ -1,0 +1,30 @@
+.orders-filter-tabs { display: flex; gap: 8px; overflow-x: auto; margin-bottom: 24px; padding-bottom: 4px; }
+.tab-count { background: rgba(255,255,255,0.3); padding: 1px 6px; border-radius: 10px; font-size: 0.7rem; }
+.orders-accordion { display: flex; flex-direction: column; gap: 10px; }
+.no-orders-msg { text-align: center; background: white; border-radius: 16px; padding: 40px; color: var(--gray-400); font-weight: 600; }
+
+.ao-card { background: white; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+.ao-row { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; transition: background 0.2s; gap: 12px; flex-wrap: wrap; }
+.ao-row:hover { background: var(--gray-50); }
+.ao-left { display: flex; align-items: center; gap: 12px; }
+.ao-customer { font-weight: 800; color: var(--gray-900); font-size: 0.95rem; }
+.ao-date { font-size: 0.78rem; color: var(--gray-500); margin-top: 2px; }
+.ao-right { display: flex; align-items: center; gap: 12px; }
+.ao-amount { font-weight: 900; color: var(--green-dark); font-size: 1rem; }
+
+.ao-details { padding: 0 20px 20px; border-top: 2px dashed var(--gray-200); }
+.ao-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-top: 20px; margin-bottom: 16px; }
+.ao-section h4 { font-size: 0.85rem; font-weight: 800; color: var(--gray-700); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.ao-item-row { display: flex; justify-content: space-between; font-size: 0.84rem; color: var(--gray-700); padding: 6px 0; border-bottom: 1px solid var(--gray-100); }
+.ao-item-row.green { color: var(--green); font-weight: 700; }
+.ao-item-row.total { font-weight: 900; color: var(--gray-900); font-size: 0.9rem; border-bottom: none; }
+.ao-info-row { display: flex; gap: 12px; font-size: 0.82rem; padding: 5px 0; }
+.ao-info-row span:first-child { color: var(--gray-500); font-weight: 600; min-width: 70px; }
+.ao-info-row span:last-child { color: var(--gray-900); font-weight: 700; }
+
+.ao-status-control { display: flex; align-items: center; gap: 12px; }
+.ao-status-control label { font-size: 0.85rem; font-weight: 700; color: var(--gray-600); }
+
+@media (max-width: 640px) {
+  .ao-detail-grid { grid-template-columns: 1fr; }
+}

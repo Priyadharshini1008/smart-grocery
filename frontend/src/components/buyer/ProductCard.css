@@ -1,0 +1,199 @@
+.product-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  animation: slide-in-up 0.4s ease-out both;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 48px rgba(255, 107, 53, 0.18);
+  border-color: var(--primary-light);
+}
+
+.product-card.out-of-stock { opacity: 0.7; }
+
+/* Badges */
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: linear-gradient(135deg, var(--accent-green), #16A34A);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 50px;
+  animation: bounce-in 0.4s ease;
+}
+
+.oos-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+/* Image */
+.product-image-container {
+  position: relative;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.06), rgba(78, 205, 196, 0.06));
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-image-bg { opacity: 2; }
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image { transform: scale(1.08); }
+
+.product-emoji {
+  font-size: 72px;
+  line-height: 1;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+}
+
+.product-card:hover .product-emoji {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Info */
+.product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-category {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--secondary-dark);
+  background: rgba(78, 205, 196, 0.1);
+  padding: 2px 8px;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.product-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-weight {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.product-pricing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.product-original-price {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+.product-meta { min-height: 20px; }
+
+.stock-indicator {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.stock-indicator.low-stock { color: #F59E0B; }
+.stock-indicator.in-stock { color: var(--accent-green); }
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.add-to-cart-btn:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+}
+
+.add-to-cart-btn.added {
+  background: linear-gradient(135deg, var(--accent-green), #16A34A);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.add-to-cart-btn.disabled {
+  background: #E5E7EB;
+  color: #9CA3AF;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin-slow 0.7s linear infinite;
+}
